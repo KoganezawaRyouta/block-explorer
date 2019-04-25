@@ -9,7 +9,7 @@
 |web3|web3js|
 |neo4j|GraphDB|
 
-#　GraphDB
+# GraphDB
 ## Block of Cypher Queries
 ### Parameters
 ```sql
@@ -78,8 +78,7 @@ OPTIONAL MATCH (tx)-[:inc]->(block)
 RETURN inputs, tx, outputs, block, inputsaddresses, outputsaddresses
 ```
 
-#　web3js
-
+# web3js
 ## Debug Sample Code
 ```javascript
 W3 = require('web3')
