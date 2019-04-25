@@ -1,0 +1,7 @@
+containers/node/btc/data/*
+containers/node/bch/data/*
+containers/node/eth/data/*
+containers/neo4j/data/*
+containers/neo4j/logs/*
+!.gitkeep
+!bitcoin.conf

@@ -1,0 +1,53 @@
+# https://wiki.parity.io/Configuring-Parity-Ethereum
+[parity]
+# Parity continously syncs the chain
+mode = "active"
+# Ropsten Test Network
+chain = "ropsten"
+# Blockchain and settings will be stored in ~/.local/share/io.parity.ethereum/test.
+base_path = "/home/parity/.local/share/io.parity.ethereum/"
+
+# [Auto-updates] to every release
+auto_update = "critical"
+# [Auto-updates] release-track
+release_track = "current"
+# [Auto-updates] Specify the maximum number of blocks used for randomly delaying updates.
+auto_update_delay = 100
+# [Auto-updates] Specify the number of blocks between each auto-update check.
+auto_update_check_frequency = 20
+# [Auto-updates] Disables auto downloading of new releases. Not recommended.
+no_download = false
+# [Auto-updates] Forces Parity to run even if there are known issues regarding consensus. Not recommended.
+no_consensus = false
+
+# Don't save pending local transactions to disk to be restored whenever the node restarts.
+no_persistent_txqueue = false
+
+[network]
+port = 30303
+min_peers = 20
+max_peers = 50
+
+[rpc]
+disable = false
+port = 18545
+apis = ['all']
+hosts = ['all']
+
+[footprint]
+tracing = "off"
+pruning = "fast"
+db_compaction = "ssd"
+cache_size = 1024
+
+[ipc]
+disable = true
+
+[dapps]
+disable = true
+
+[websockets]
+disable = true
+
+[ipfs]
+enable = false

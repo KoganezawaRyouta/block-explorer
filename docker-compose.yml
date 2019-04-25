@@ -1,0 +1,79 @@
+version: '3'
+
+services:
+  #########################################################################
+  # bitcoin client
+  #########################################################################
+  btc-node:
+    build:
+      context: ./containers/node/btc/
+      dockerfile: Dockerfile
+      args:
+        USER_NAME: $USER
+    volumes:
+      - ./containers/node/btc/data:/home/${USER}/.bitcoin
+    user: ${USERID}:${GID}
+    ports:
+      - "19332:18332"
+    stdin_open: true
+    tty: true
+    command: /usr/bin/bitcoind --printtoconsole
+
+  #########################################################################
+  # bitcoin cash client
+  #########################################################################
+  bch-node:
+    build:
+      context: ./containers/node/bch/
+      dockerfile: Dockerfile
+      args:
+        USER_NAME: $USER
+    user: ${USERID}:${GID}
+    volumes:
+      - ./containers/node/bch/data:/home/${USER}/.bitcoin
+    ports:
+      - "19333:18332"
+    stdin_open: true
+    tty: true
+    command: /usr/bin/bitcoind --printtoconsole
+
+  #########################################################################
+  # ethereum client
+  #########################################################################
+  eth-node:
+    build:
+      context: .
+      dockerfile: ./containers/node/eth/Dockerfile
+    volumes:
+      - ./containers/node/eth/data:/home/parity/.local/share/io.parity.ethereum
+    ports:
+      - "8545:8545"
+      - "18545:18545"
+      - "30303/udp"
+      - "30303/tcp"
+      - "5001:5001"
+      - "8082:8082"
+      - "8180:8180"
+      - "8546:8546"
+    stdin_open: true
+    tty: true
+    command: --config /home/parity/toml/config.toml --warp-barrier 4950000
+
+  web3:
+    build:
+      context: .
+      dockerfile: ./containers/web3/Dockerfile
+    stdin_open: true
+    tty: true
+    command: node
+    links:
+      - eth-node
+
+  neo4j:
+    image: neo4j:3.5.4
+    volumes:
+    - ./containers/neo4j/data:/data
+    - ./containers/neo4j/logs:/logs
+    ports:
+    - "7474:7474"
+    - "7687:7687"
