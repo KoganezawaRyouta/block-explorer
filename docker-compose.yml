@@ -57,7 +57,7 @@ services:
       - "8546:8546"
     stdin_open: true
     tty: true
-    command: --config /home/parity/toml/config.toml --warp-barrier 4950000
+    command: --config /home/parity/toml/config.toml --warp-barrier 4950000 --jsonrpc-interface all --jsonrpc-hosts all
 
   web3:
     build:
@@ -66,14 +66,16 @@ services:
     stdin_open: true
     tty: true
     command: node
+    depends_on:
+      - eth-node
     links:
       - eth-node
 
   neo4j:
     image: neo4j:3.5.4
     volumes:
-    - ./containers/neo4j/data:/data
-    - ./containers/neo4j/logs:/logs
+      - ./containers/neo4j/data:/data
+      - ./containers/neo4j/logs:/logs
     ports:
-    - "7474:7474"
-    - "7687:7687"
+      - "7474:7474"
+      - "7687:7687"
