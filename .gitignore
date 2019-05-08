@@ -3,5 +3,7 @@ containers/node/bch/data/*
 containers/node/eth/data/*
 containers/neo4j/data/*
 containers/neo4j/logs/*
+dapps/node_modules/*
+
 !.gitkeep
 !bitcoin.conf

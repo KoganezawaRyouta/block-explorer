@@ -25,8 +25,8 @@ no_persistent_txqueue = false
 
 [network]
 port = 30303
-min_peers = 20
-max_peers = 50
+min_peers = 10
+max_peers = 20
 
 [rpc]
 disable = false
