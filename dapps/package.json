@@ -9,6 +9,14 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "truffle": "^5.0.15"
+    "babel-polyfill": "^6.26.0",
+    "truffle": "^5.0.15",
+    "truffle-hdwallet-provider": "^1.0.9",
+    "web3": "^1.0.0-beta.37"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "parcel-bundler": "^1.12.3"
   }
 }

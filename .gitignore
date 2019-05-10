@@ -4,6 +4,9 @@ containers/node/eth/data/*
 containers/neo4j/data/*
 containers/neo4j/logs/*
 dapps/node_modules/*
-
+.cache
+dist
+build
+migrations
 !.gitkeep
 !bitcoin.conf

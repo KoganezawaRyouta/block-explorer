@@ -55,6 +55,7 @@ services:
       - "8082:8082"
       - "8180:8180"
       - "8546:8546"
+      - "33303:33303"
     stdin_open: true
     tty: true
     command: --config /home/parity/toml/config.toml --warp-barrier 4950000 --jsonrpc-interface all --jsonrpc-hosts all
@@ -95,6 +96,21 @@ services:
       dockerfile: ./containers/dapps/Dockerfile
     volumes:
       - ./dapps/:/dapps
+    ports:
+      - "9545:9545"
+      - "1234:1234"
+#      - "33113:33113"
+#      - "34939:34939"
+#      - "40149:40149"
+#      - "39507:39507"
+#      - "39125:39125"
+#      - "46675:46675"
+#      - "35927:35927"
+#      - "34051:34051"
+#      - "35923:35923"
+#      - "40805:40805"
+#      - "46405:46405"
+#      - "40035:40035"
     stdin_open: true
     tty: true
     command: bash -c "touch /d.txt && tail -f /d.txt"
