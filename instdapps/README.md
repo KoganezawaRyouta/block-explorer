@@ -25,5 +25,5 @@ $ truffle(develop)> migrate
 
 ### run web server
 ```
-$ cd ./client/; $(npm bin)/parcel src/index.html
+$ cd ./client/; npm run dev
 ```
