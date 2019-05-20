@@ -4,6 +4,8 @@ containers/node/eth/data/*
 containers/neo4j/data/*
 containers/neo4j/logs/*
 dapps/node_modules/*
+zepkit/node_modules/*
+instdapps/node_modules/*
 .cache
 dist
 build
