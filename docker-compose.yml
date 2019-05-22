@@ -129,6 +129,21 @@ services:
     command: bash -c "touch /d.txt && tail -f /d.txt"
 
   #########################################################################
+  # ganache
+  #########################################################################
+  ganache:
+    build:
+      context: .
+      dockerfile: ./containers/ganache//Dockerfile
+    volumes:
+      - ./containers/ganache/data/:/var/ganache
+    ports:
+      - "8545:8545"
+    stdin_open: true
+    tty: true
+    command: bash -c "touch /d.txt && tail -f /d.txt"
+
+  #########################################################################
   # instdapps
   #########################################################################
   instdapps:
@@ -138,9 +153,11 @@ services:
     volumes:
       - ./instdapps/:/instdapps
     ports:
-      - "3003:3000"
-      - "8545:8545"
-      - "7545:7545"
+      - "3000:3000"
+    depends_on:
+      - ganache
+    links:
+      - ganache
     stdin_open: true
     tty: true
     command: bash -c "touch /d.txt && tail -f /d.txt"

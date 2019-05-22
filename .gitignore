@@ -3,11 +3,14 @@ containers/node/bch/data/*
 containers/node/eth/data/*
 containers/neo4j/data/*
 containers/neo4j/logs/*
+containers/ganache/data/*
 dapps/node_modules/*
 zepkit/node_modules/*
 instdapps/node_modules/*
 instdapps/client/node_modules/*
+
 .cache
+.idea
 dist
 build
 migrations

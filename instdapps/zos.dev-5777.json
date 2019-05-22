@@ -1,7 +1,7 @@
 {
   "contracts": {
     "InstagramPosting": {
-      "address": "0xe78A0F7E598Cc8b0Bb87894B0F60dD2a88d6a8Ab",
+      "address": "0x808253c9562A2919a2d4cd362F11a1ffA7998531",
       "constructorCode": "608060405234801561001057600080fd5b506106b2806100206000396000f3fe",
       "bodyBytecodeHash": "09ca600873e0b030d1b92c5d71d2af1f15455c2b8eecbba89c89447fb1e1dd82",
       "localBytecodeHash": "c061ae19153efd44e45331639374d39c2be27b5c1d4b310ab3bc4f8fedaed6ab",

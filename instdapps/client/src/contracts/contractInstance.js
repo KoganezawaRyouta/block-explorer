@@ -2,7 +2,7 @@
 import web3 from './web3';
 
 
-const address = "0xe78A0F7E598Cc8b0Bb87894B0F60dD2a88d6a8Ab";
+const address = "0x808253c9562A2919a2d4cd362F11a1ffA7998531";
 const abi = [
     {
         "anonymous": false,
