@@ -138,8 +138,26 @@ services:
     volumes:
       - ./instdapps/:/instdapps
     ports:
-      - "9545:9545"
-      - "1234:1234"
+      - "3003:3000"
+      - "8545:8545"
+      - "7545:7545"
+    stdin_open: true
+    tty: true
+    command: bash -c "touch /d.txt && tail -f /d.txt"
+
+  #########################################################################
+  # erc20
+  #########################################################################
+  erc20:
+    build:
+      context: .
+      dockerfile: ./containers/erc20//Dockerfile
+    volumes:
+      - ./erc20/:/erc20
+    ports:
+      - "3003:3000"
+      - "8545:8545"
+      - "7545:7545"
     stdin_open: true
     tty: true
     command: bash -c "touch /d.txt && tail -f /d.txt"

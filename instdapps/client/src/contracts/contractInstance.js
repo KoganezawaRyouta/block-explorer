@@ -2,8 +2,14 @@
 import web3 from './web3';
 
 
-const address = "0x6d170132ab0ce1541b896397579f85d883b4335f";
+const address = "0xe78A0F7E598Cc8b0Bb87894B0F60dD2a88d6a8Ab";
 const abi = [
+    {
+        "anonymous": false,
+        "inputs": [],
+        "name": "NewPost",
+        "type": "event"
+    },
     {
         "constant": false,
         "inputs": [
@@ -20,26 +26,6 @@ const abi = [
         "outputs": [],
         "payable": false,
         "stateMutability": "nonpayable",
-        "type": "function"
-    },
-    {
-        "anonymous": false,
-        "inputs": [],
-        "name": "NewPost",
-        "type": "event"
-    },
-    {
-        "constant": true,
-        "inputs": [],
-        "name": "getCounter",
-        "outputs": [
-            {
-                "name": "",
-                "type": "uint256"
-            }
-        ],
-        "payable": false,
-        "stateMutability": "view",
         "type": "function"
     },
     {
@@ -63,6 +49,20 @@ const abi = [
             {
                 "name": "owner",
                 "type": "address"
+            }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "constant": true,
+        "inputs": [],
+        "name": "getCounter",
+        "outputs": [
+            {
+                "name": "",
+                "type": "uint256"
             }
         ],
         "payable": false,

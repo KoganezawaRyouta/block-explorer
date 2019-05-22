@@ -1,4 +1,9 @@
-# instdapps
+# erc20
+
+$ truffle init
+
+
+qq
 
 ## install the dependencies
 ```

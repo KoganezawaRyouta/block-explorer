@@ -1,0 +1,88 @@
+{
+  "contracts": {
+    "InstagramPosting": {
+      "address": "0xe78A0F7E598Cc8b0Bb87894B0F60dD2a88d6a8Ab",
+      "constructorCode": "608060405234801561001057600080fd5b506106b2806100206000396000f3fe",
+      "bodyBytecodeHash": "09ca600873e0b030d1b92c5d71d2af1f15455c2b8eecbba89c89447fb1e1dd82",
+      "localBytecodeHash": "c061ae19153efd44e45331639374d39c2be27b5c1d4b310ab3bc4f8fedaed6ab",
+      "deployedBytecodeHash": "c061ae19153efd44e45331639374d39c2be27b5c1d4b310ab3bc4f8fedaed6ab",
+      "types": {
+        "t_struct<InstagramPosting.Post>": {
+          "id": "t_struct<InstagramPosting.Post>",
+          "kind": "struct",
+          "label": "InstagramPosting.Post",
+          "members": [
+            {
+              "label": "owner",
+              "astId": 7,
+              "type": "t_address",
+              "src": "223:13:0"
+            },
+            {
+              "label": "imgHash",
+              "astId": 9,
+              "type": "t_string",
+              "src": "246:14:0"
+            },
+            {
+              "label": "textHash",
+              "astId": 11,
+              "type": "t_string",
+              "src": "270:15:0"
+            }
+          ]
+        },
+        "t_address": {
+          "id": "t_address",
+          "kind": "elementary",
+          "label": "address"
+        },
+        "t_string": {
+          "id": "t_string",
+          "kind": "elementary",
+          "label": "string"
+        },
+        "t_mapping<t_struct<InstagramPosting.Post>>": {
+          "id": "t_mapping<t_struct<InstagramPosting.Post>>",
+          "valueType": "t_struct<InstagramPosting.Post>",
+          "label": "mapping(key => InstagramPosting.Post)",
+          "kind": "mapping"
+        },
+        "t_uint256": {
+          "id": "t_uint256",
+          "kind": "elementary",
+          "label": "uint256"
+        }
+      },
+      "storage": [
+        {
+          "contract": "InstagramPosting",
+          "path": "contracts/InstagramPosting.sol",
+          "label": "posts",
+          "astId": 16,
+          "type": "t_mapping<t_struct<InstagramPosting.Post>>",
+          "src": "348:30:0"
+        },
+        {
+          "contract": "InstagramPosting",
+          "path": "contracts/InstagramPosting.sol",
+          "label": "postCtr",
+          "astId": 18,
+          "type": "t_uint256",
+          "src": "430:15:0"
+        }
+      ],
+      "warnings": {
+        "hasConstructor": false,
+        "hasSelfDestruct": false,
+        "hasDelegateCall": false,
+        "hasInitialValuesInDeclarations": false,
+        "uninitializedBaseContracts": []
+      }
+    }
+  },
+  "solidityLibs": {},
+  "proxies": {},
+  "zosversion": "2.2",
+  "version": "0.1.0"
+}
