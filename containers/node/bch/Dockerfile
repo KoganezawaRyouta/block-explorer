@@ -12,7 +12,7 @@ tar -zxvf bitcoin-abc-0.18.6-x86_64-linux-gnu.tar.gz && cd bitcoin-abc-0.18.6/bi
 
 RUN mkdir -p /home/${USER_NAME}/.bitcoin
 RUN groupadd -r ${USER_NAME} && \
-    useradd -r -g ${USER_NAME} -d /home/${USER} -s /sbin/nologin -c "Docker image user" ${USER_NAME}
+    useradd -r -g ${USER_NAME} -d /home/${USER_NAME} -s /sbin/nologin -c "Docker image user" ${USER_NAME}
 
 ENV HOME=/home/${USER_NAME}
 USER ${USER_NAME}

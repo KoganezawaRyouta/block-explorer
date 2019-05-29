@@ -75,6 +75,7 @@ class App extends Component {
         }
         if (Wallet.networks) {
           deployedNetwork = Wallet.networks[networkId.toString()];
+          console.log(instance);
           if (deployedNetwork) {
             instanceWallet = new web3.eth.Contract(
               Wallet.abi,

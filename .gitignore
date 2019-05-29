@@ -4,10 +4,20 @@ containers/node/eth/data/*
 containers/neo4j/data/*
 containers/neo4j/logs/*
 containers/ganache/data/*
+
 dapps/node_modules/*
-zepkit/node_modules/*
+
 instdapps/node_modules/*
 instdapps/client/node_modules/*
+
+erc20/node_modules/*
+erc20/.zos.session
+erc20/zos.json
+erc20/zos.dev-5777.json
+
+zepkit/node_modules/*
+zepkit/.zos.session
+zepkit/app/zos.json
 
 .cache
 .idea

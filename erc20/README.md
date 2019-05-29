@@ -1,9 +1,8 @@
 # erc20
 
-$ truffle init
-
-
-qq
+$(npm bin)/truffle init
+$(npm bin)/zos init erc-20
+$(npm bin)/zos link openzeppelin-eth
 
 ## install the dependencies
 ```

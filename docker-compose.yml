@@ -122,8 +122,7 @@ services:
     volumes:
       - ./zepkit/:/zepkit
     ports:
-      - "3003:3000"
-      - "8545:8545"
+      - "3000:3000"
     stdin_open: true
     tty: true
     command: bash -c "touch /d.txt && tail -f /d.txt"
@@ -172,9 +171,26 @@ services:
     volumes:
       - ./erc20/:/erc20
     ports:
-      - "3003:3000"
-      - "8545:8545"
-      - "7545:7545"
+      - "3000:3000"
     stdin_open: true
     tty: true
+    command: bash -c "touch /d.txt && tail -f /d.txt"
+
+  #########################################################################
+  # go-dapps
+  #########################################################################
+  go-dapps:
+    build:
+      context: .
+      dockerfile: ./containers/go-dapps/Dockerfile
+    volumes:
+      - ./go-dapps/:/go/src/github.com/KoganezawaRyouta/block-explorer/go-dapps
+    ports:
+      - "3001:3000"
+    stdin_open: true
+    tty: true
+    depends_on:
+      - ganache
+    links:
+      - ganache
     command: bash -c "touch /d.txt && tail -f /d.txt"

@@ -3,15 +3,10 @@ import BootstrapVue from 'bootstrap-vue';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-vue/dist/bootstrap-vue.css';
 import 'babel-polyfill';
-import
-{
-    Nav, Image, Card, Layout, Button, Modal, FormFile,
-}
-    from 'bootstrap-vue/es/components';
+import { Nav, Image, Card, Layout, Button, Modal, FormFile } from 'bootstrap-vue/es/components';
 import App from './App.vue';
 import web3 from './contracts/web3';
 import contract from './contracts/contractInstance';
-
 
 /**
  * injects bootstrap libraries

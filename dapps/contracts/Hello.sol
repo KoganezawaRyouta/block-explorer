@@ -5,7 +5,7 @@ contract Hello {
   constructor(string memory initMessage) public {
     message = initMessage;
   }
-  function update(string memory newMessage)     public {
+  function update(string memory newMessage) public {
     message = newMessage;
   }
 }
