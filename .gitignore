@@ -19,6 +19,7 @@ zepkit/node_modules/*
 zepkit/.zos.session
 zepkit/app/zos.json
 
+go-dapps/node_modules
 .cache
 .idea
 dist

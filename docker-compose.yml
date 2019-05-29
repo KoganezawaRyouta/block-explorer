@@ -194,3 +194,31 @@ services:
     links:
       - ganache
     command: bash -c "touch /d.txt && tail -f /d.txt"
+
+  #########################################################################
+  # go-dapps-zepkit
+  #########################################################################
+  go-dapps-zepkit:
+    build:
+      context: .
+      dockerfile: ./containers/go-dapps-zepkit//Dockerfile
+    volumes:
+      - ./go-dapps/:/go/src/github.com/KoganezawaRyouta/block-explorer/go-dapps
+    stdin_open: true
+    tty: true
+    command: bash -c "touch /d.txt && tail -f /d.txt"
+#    command: bash -c "npm install && touch /d.txt && tail -f /d.txt"
+
+  #########################################################################
+  # perigord
+  #########################################################################
+  perigord:
+    build:
+      context: .
+      dockerfile: ./containers/perigord//Dockerfile
+    volumes:
+      - ./perigord:/go/src/perigord
+    stdin_open: true
+    tty: true
+    command: bash -c "touch /d.txt && tail -f /d.txt"
+#    command: bash -c "npm install && touch /d.txt && tail -f /d.txt"
