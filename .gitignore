@@ -18,6 +18,7 @@ erc20/zos.dev-5777.json
 zepkit/node_modules/*
 zepkit/.zos.session
 zepkit/app/zos.json
+zepkit/app/zos.ropsten.json
 
 go-dapps/node_modules
 .cache

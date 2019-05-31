@@ -1,22 +1,25 @@
 const path = require("path");
 require('dotenv').config();
-const mnemonic = process.env.MNENOMIC;
+// const mnemonic = process.env.MNENOMIC;
 const HDWalletProvider = require("truffle-hdwallet-provider");
+const mnemonic = "parent pioneer quick wheat empty travel body coral arrange nasty empty must turtle dismiss extra";
+const infura_url = "https://ropsten.infura.io/v3/e768b31d63f34e939640c06edaaf2dc1";
+
 // Create your own key for Production environments (https://infura.io/)
-const INFURA_ID = 'd6760e62b67f4937ba1ea2691046f06d';
+// const INFURA_ID = 'e768b31d63f34e939640c06edaaf2dc1';
 
 module.exports = {
   // See <http://truffleframework.com/docs/advanced/configuration>
   // to customize your Truffle configuration!
   networks: {
     development: {
-      host: "ganache",     // Localhost (default: none)
-      port: 8545,            // Standard Ethereum port (default: none)
-      network_id: "*",       // Any network (default: none)
+      host: "ganache",
+      port: 8545,
+      network_id: "*",
     },
     ropsten: {
       provider: function() {
-        return new HDWalletProvider(mnemonic, 'https://ropsten.infura.io/v3/' + process.env.INFURA_API_KEY)
+        return new HDWalletProvider(mnemonic, infura_url)
       },
       network_id: '3',
       gas: 4465030,
@@ -36,7 +39,6 @@ module.exports = {
       gas: 3000000,
       gasPrice: 10000000000
     },
-    // main ethereum network(mainnet)
     main: {
       provider: () => new HDWalletProvider(process.env.MNENOMIC, "https://mainnet.infura.io/v3/" + process.env.INFURA_API_KEY),
       network_id: 1,
