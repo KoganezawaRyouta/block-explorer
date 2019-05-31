@@ -21,7 +21,37 @@ import (
 func main() {
 	//approveFnSignature()
 	//transferFnSignature()
-	totalSupply()
+	//totalSupply()
+	erc721BalanceOf()
+}
+
+func erc721BalanceOf() {
+	fmt.Println("erc721BalanceOf ===============")
+
+	client, err := ethclient.Dial("https://ropsten.infura.io/v3/e768b31d63f34e939640c06edaaf2dc1")
+	if err != nil {
+		log.Fatal(err)
+	}
+	tokenAddress := common.HexToAddress("0x6D6C103733e4C6cfE2a928530C51d3570704CFfB")
+	balanceOfFnSignature := []byte("balanceOf(address)")
+	hash := sha3.NewLegacyKeccak256()
+	hash.Write(balanceOfFnSignature)
+	methodID := hash.Sum(nil)[:4]
+	fmt.Println(hexutil.Encode(methodID))
+
+	var data []byte
+	data = append(data, methodID...)
+	balance, err := client.CallContract(context.Background(), ethereum.CallMsg{
+		To:   &tokenAddress,
+		Data: data,
+	}, nil)
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	// hexadecimal []byte -> hexadecimal string -> hexadecimal -> decimal number
+	v, _ := strconv.ParseUint(hex.EncodeToString(balance), 16, 0)
+	fmt.Println(v)
 }
 
 func totalSupply() {

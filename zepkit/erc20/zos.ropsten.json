@@ -1,0 +1,117 @@
+{
+  "contracts": {
+    "Counter": {
+      "address": "0x3eE4a20429A9D196f1B043881Fb9378aC59299C5",
+      "constructorCode": "608060405234801561001057600080fd5b50610458806100206000396000f3fe",
+      "bodyBytecodeHash": "f6d995455fdbc9a51781679e0ec0b3e840fd210cd80afcfc120927eea2db60e7",
+      "localBytecodeHash": "b05bbcd0aa22e660ec8e3d5ed87c06fb6a4b3bec557bba61186ee14faf6bea08",
+      "deployedBytecodeHash": "b05bbcd0aa22e660ec8e3d5ed87c06fb6a4b3bec557bba61186ee14faf6bea08",
+      "types": {
+        "t_bool": {
+          "id": "t_bool",
+          "kind": "elementary",
+          "label": "bool"
+        },
+        "t_uint256": {
+          "id": "t_uint256",
+          "kind": "elementary",
+          "label": "uint256"
+        },
+        "t_array:50<t_uint256>": {
+          "id": "t_array:50<t_uint256>",
+          "valueType": "t_uint256",
+          "length": "50",
+          "kind": "array",
+          "label": "uint256[50]"
+        },
+        "t_address": {
+          "id": "t_address",
+          "kind": "elementary",
+          "label": "address"
+        }
+      },
+      "storage": [
+        {
+          "contract": "Initializable",
+          "path": "zos-lib/contracts/Initializable.sol",
+          "label": "initialized",
+          "astId": 1769,
+          "type": "t_bool",
+          "src": "757:24:14"
+        },
+        {
+          "contract": "Initializable",
+          "path": "zos-lib/contracts/Initializable.sol",
+          "label": "initializing",
+          "astId": 1771,
+          "type": "t_bool",
+          "src": "876:25:14"
+        },
+        {
+          "contract": "Initializable",
+          "path": "zos-lib/contracts/Initializable.sol",
+          "label": "______gap",
+          "astId": 1827,
+          "type": "t_array:50<t_uint256>",
+          "src": "1951:29:14"
+        },
+        {
+          "contract": "Counter",
+          "path": "contracts/Counter.sol",
+          "label": "count",
+          "astId": 6,
+          "type": "t_uint256",
+          "src": "222:18:0"
+        },
+        {
+          "contract": "Counter",
+          "path": "contracts/Counter.sol",
+          "label": "_owner",
+          "astId": 8,
+          "type": "t_address",
+          "src": "244:22:0"
+        }
+      ],
+      "warnings": {
+        "hasConstructor": false,
+        "hasSelfDestruct": false,
+        "hasDelegateCall": false,
+        "hasInitialValuesInDeclarations": false,
+        "uninitializedBaseContracts": []
+      }
+    }
+  },
+  "solidityLibs": {},
+  "proxies": {
+    "zepkit/Counter": [
+      {
+        "address": "0x82831A4A8C0d0e4b66EdCB954724de6F89fBD70D",
+        "version": "0.1.0",
+        "implementation": "0x3eE4a20429A9D196f1B043881Fb9378aC59299C5"
+      }
+    ],
+    "openzeppelin-eth/StandaloneERC20": [
+      {
+        "address": "0xaBfceE43417680B51c823c4A0219C9D43ACfd489",
+        "version": "2.1.3",
+        "implementation": "0x4831f06a71Bc782e890FDAe4D79913F97Bb7ee6F"
+      },
+      {
+        "address": "0xD80ee702122c3Af9568823ccB24A6258554E7b8f",
+        "version": "2.1.3",
+        "implementation": "0x4831f06a71Bc782e890FDAe4D79913F97Bb7ee6F"
+      }
+    ]
+  },
+  "zosversion": "2.2",
+  "version": "0.1.0",
+  "dependencies": {
+    "openzeppelin-eth": {
+      "package": "0x2a9e7b63514438906a83a1e320dbbd814d417002",
+      "version": "2.1.3"
+    }
+  },
+  "proxyAdmin": {
+    "address": "0x0ac4fa5E125c320fa630228e9b8001498Bd42d50"
+  }
+}
