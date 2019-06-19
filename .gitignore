@@ -14,7 +14,7 @@ erc20/node_modules/*
 erc20/.zos.session
 erc20/zos.json
 erc20/zos.dev-5777.json
-
+zepkit/erc721/node_modules
 zepkit/node_modules/*
 zepkit/.zos.session
 zepkit/app/zos.json
