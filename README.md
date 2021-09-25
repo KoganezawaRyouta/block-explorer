@@ -92,5 +92,7 @@ web3.eth.isSyncing().then(result => {console.log(result)})
 ```
 
 # dapps
+see: https://github.com/KoganezawaRyouta/block-explorer/tree/master/dapps
+
 # instdapps
 # zepkit
