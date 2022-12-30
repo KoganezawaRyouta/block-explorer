@@ -13,6 +13,6 @@
     "openzeppelin-eth": "^2.1.3",
     "openzeppelin-solidity": "^2.1.1",
     "truffle": "^5.0.8",
-    "zos": "^2.2.0"
+    "zos": "^2.4.3"
   }
 }
